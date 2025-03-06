@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkDin</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+    <!----------- nav bar start ----------->
+    <nav class="navbar">
+        <!-- nav left  -->
+        <div class="navbar_left">
+            <a href="index.html" class="logo"> <img src="Assest/logo.png"> </a>
+
+            <div class="search_box">
+                <img src="Assest/search.png" alt="">
+                <input type="text" placeholder="Search">
+            </div>
+        </div>
+        <!-- nav center -->
+        <div class="navbar_center">
+            <ul>
+                <li><a href="#" class="active-link"> <img src="Assest/home.png"> <span>Home</span></a></li>
+                <li><a href="#"> <img src="Assest/network.png"> <span>My Network</span></a></li>
+                <li><a href="#"> <img src="Assest/jobs.png"> <span>Jobs</span></a></li>
+                <li><a href="#"> <img src="Assest/message.png"> <span>Messaging</span></a></li>
+                <li><a href="#"> <img src="Assest/notification.png"> <span>Notifications</span></a></li>
+            </ul>
+        </div>
+        <!-- nav right  -->
+        <div class="navbar_right">
+            <div class="online">
+                <img src="Assest/user-1.png" class="nav-profile-img" onclick="togglemenu()">
+            </div>
+        </div>
+
+        <!-- --------------Profle-drop-down-menu------------- -->
+        <div class="profile_menu_wrap" id="profileMenu">
+            <div class="profile_menu">
+                <div class="user_info">
+                    <img src="Assest/user-1.png">
+                    <div>
+                        <h3>Balajee Kumar</h3>
+                        <a href="#">See Your Profile</a>
+                    </div>
+                </div>
+                <hr>
+                <a href="#" class="profile_menu_link">
+                    <img src="Assest/feedback.png">
+                    <p>Give Feedback</p>
+                    <span>></span>
+                </a>
+
+                <a href="#" class="profile_menu_link">
+                    <img src="Assest/setting.png">
+                    <p>Setting & Privacy</p>
+                    <span>></span>
+                </a>
+
+                <a href="#" class="profile_menu_link">
+                    <img src="Assest/help.png">
+                    <p>Help & Support</p>
+                    <span>></span>
+                </a>
+
+                <a href="#" class="profile_menu_link">
+                    <img src="Assest/display.png">
+                    <p>Display & Accessibility</p>
+                    <span>></span>
+                </a>
+
+                <a href="#" class="profile_menu_link">
+                    <img src="Assest/logout.png">
+                    <p>Logout</p>
+                    <span>></span>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <!----------- nav bar close ----------->
+
+    <div class="container">
+        <!-------- left_sidebar --------->
+        <div class="left_sidebar">
+            <div class="sidebar_profile_box">
+                <img src="Assest/coverpic.png" width="100%">
+                <div class="sidebar_profile_info">
+                    <img src="Assest/user-1.png">
+                    <h1>Balajee Kumar</h1>
+                    <p>Aspiring Web Developer | Html5 | Css | JavaScript | SQL | Photoshop | MS Excel, Word 🖥️</p>
+                    <small class="location">Patna, Bihar</small>
+                    <br>
+                    <br>
+                    <div class="Exp_btn">
+                        <i class="fa-solid fa-plus"></i>
+                        Experience
+                    </div>
+                    <br>
+                </div>
+
+            </div>
+
+            <div class="premium_box">
+                <h4> Access exclusive tools & insights</h4>
+                <div class="pre_img_box">
+                    <img src="Assest/premium.png" width="20px"> <span>Try 1 month for ₹0</span>
+                </div>
+            </div>
+
+            <div class="p_view_box">
+                <div class="first">
+                    <h3>Profile Viewers</h3>
+                    <p>22</p>
+                </div>
+
+                <div class="second">
+                    <h3>Post Impressions</h3>
+                    <p>717</p>
+                </div>
+            </div>
+
+            <div class="left_sidebar_lst_box">
+                <div class="four_logo_text">
+                    <img src="Assest/event.png" width="20px"> <span>Events</span>
+                </div>
+                <div class="four_logo_text">
+                    <img src="Assest/group.png" width="20px"> <span>Groups</span>
+                </div>
+                <div class="four_logo_text">
+                    <img src="Assest/items.png" width="20px"> <span>Saved items</span>
+                </div>
+                <div class="four_logo_text">
+                    <img src="Assest/more.png" width="20px"> <span>More</span>
+                </div>
+
+            </div>
+
+        </div>
+        <!-------- main_content --------->
+        <div class="main_content">
+
+            <div class="create_post">
+                <div class="create_post_input">
+                    <img src="Assest/user-1.png">
+                    <textarea rows="2" placeholder="Write a post"></textarea>
+                </div>
+                <div class="create_post_links">
+                    <li><img src="Assest/photo.png">Photo</li>
+                    <li><img src="Assest/video.png">Video</li>
+                    <li><img src="Assest/event.png">Event</li>
+                    <li id="post_text">Post</li>
+                </div>
+            </div>
+
+            <div class="sort_by">
+                <hr>
+                <p>Sort by: <span>Top <img src="Assest/down-arrow.png"></span></p>
+            </div>
+
+            <!-- First Post Start -->
+            <div class="postt">
+                <div class="post_author">
+                    <img src="Assest/user-2.png">
+                    <div>
+                        <h1>Jef Bezos</h1>
+                        <small>Founder & CEO of Amazon</small>
+                        <small>2 hours ago</small>
+                    </div>
+                </div>
+
+                <p>📚💻 Working hard or hardly working? Two people are collaborating at a cozy table with their laptops
+                    and smartphones. One person is busy with a yellow laptop, while the other is sitting close by. It's
+                    a laid-back office or study setting. 📖💻✨</p>
+                <img src="Assest/post-image-1.png" width="100%">
+
+                <div class="post_stats">
+                    <div>
+                        <img src="Assest/thumbsup.png">
+                        <img src="Assest/love.png">
+                        <img src="Assest/clap.png">
+                        <span class="liked_users">Khawahish Yadav and 25 other</span>
+                    </div>
+
+                    <div>
+                        <span>22 Comments &middot; 41 Shares</span>
+                    </div>
+                </div>
+
+                <div class="post_activity">
+                    <div>
+                        <img src="Assest/user-2.png" class="post_activity_user_icon">
+                        <img src="Assest/down-arrow.png" class="post_activity_arrow_icon">
+                    </div>
+                    <div class="post_activity_link">
+                        <img src="Assest/like.png">
+                        <span>Like</span>
+                    </div>
+
+                    <div class="post_activity_link">
+                        <img src="Assest/comment.png">
+                        <span>Commment</span>
+                    </div>
+
+                    <div class="post_activity_link">
+                        <img src="Assest/share.png">
+                        <span>Share</span>
+                    </div>
+
+                    <div class="post_activity_link">
+                        <img src="Assest/send.png">
+                        <span></span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Second Post Start -->
+            <div class="postt">
+                <div class="post_author">
+                    <img src="Assest/user-3.png">
+                    <div>
+                        <h1>Khwahish Yadav</h1>
+                        <small>Freelncer at Netxpire.Net</small>
+                        <small>5 hours ago</small>
+                    </div>
+                </div>
+
+                <p>👩‍💻👨‍💻 Two people are collaborating on a project at a table, engrossed in their work on a laptop.
+                    The natural light streaming through the large windows creates a bright and inviting workspace. This
+                    scene beautifully illustrates teamwork and the seamless integration of technology in our modern work
+                    environment. 🌟📈
+                </p>
+                <img src="Assest/post-image-2.png" width="100%">
+
+                <div class="post_stats">
+                    <div>
+                        <img src="Assest/thumbsup.png">
+                        <img src="Assest/love.png">
+                        <img src="Assest/clap.png">
+                        <span class="liked_users">Pranav Pratap Sahni and 56 other</span>
+                    </div>
+
+                    <div>
+                        <span>52 Comments &middot; 1 Shares</span>
+                    </div>
+                </div>
+
+                <div class="post_activity">
+                    <div>
+                        <img src="Assest/user-3.png" class="post_activity_user_icon">
+                        <img src="Assest/down-arrow.png" class="post_activity_arrow_icon">
+                    </div>
+                    <div class="post_activity_link">
+                        <img src="Assest/like.png">
+                        <span>Like</span>
+                    </div>
+
+                    <div class="post_activity_link">
+                        <img src="Assest/comment.png">
+                        <span>Commment</span>
+                    </div>
+
+                    <div class="post_activity_link">
+                        <img src="Assest/share.png">
+                        <span>Share</span>
+                    </div>
+
+                    <div class="post_activity_link">
+                        <img src="Assest/send.png">
+                        <span></span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Third Post Start -->
+            <div class="postt">
+                <div class="post_author">
+                    <img src="Assest/user-4.png">
+                    <div>
+                        <h1>Jyoti Kumari</h1>
+                        <small>Future Doctor</small>
+                        <small>5 hours ago</small>
+                    </div>
+                </div>
+
+                <p>👩‍💻💼
+                    A professional standing confidently in a modern office, with a laptop on the desk. The bright and
+                    spacious workspace is perfect for productivity and creativity! ✨🌟
+                    🌟📈
+                </p>
+                <img src="Assest/post-image-3.png" width="100%">
+
+                <div class="post_stats">
+                    <div>
+                        <img src="Assest/thumbsup.png">
+                        <img src="Assest/love.png">
+                        <img src="Assest/clap.png">
+                        <span class="liked_users">Pranav Pratap Sahni and 56 other</span>
+                    </div>
+
+                    <div>
+                        <span>52 Comments &middot; 1 Shares</span>
+                    </div>
+                </div>
+
+                <div class="post_activity">
+                    <div>
+                        <img src="Assest/user-4.png" class="post_activity_user_icon">
+                        <img src="Assest/down-arrow.png" class="post_activity_arrow_icon">
+                    </div>
+                    <div class="post_activity_link">
+                        <img src="Assest/like.png">
+                        <span>Like</span>
+                    </div>
+
+                    <div class="post_activity_link">
+                        <img src="Assest/comment.png">
+                        <span>Commment</span>
+                    </div>
+
+                    <div class="post_activity_link">
+                        <img src="Assest/share.png">
+                        <span>Share</span>
+                    </div>
+
+                    <div class="post_activity_link">
+                        <img src="Assest/send.png">
+                        <span></span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Fourt Post StART -->
+            <div class="postt">
+                <div class="post_author">
+                    <img src="Assest/user-5.png">
+                    <div>
+                        <h1>Pranav Pratap Sahni</h1>
+                        <small>Front End Developer | HTML | CSS & Js</small>
+                        <small>9 hours ago</small>
+                    </div>
+                </div>
+
+                <p>🚁🔧 A person is working on a large drone in a workshop, wearing a virtual reality headset. The
+                    background features a large screen displaying a technical blueprint of the drone. The scene
+                    highlights the integration of advanced technology and hands-on engineering. 🚀💡
+                </p>
+                <img src="Assest/post-image-5.jpg" width="100%">
+
+                <div class="post_stats">
+                    <div>
+                        <img src="Assest/thumbsup.png">
+                        <img src="Assest/love.png">
+                        <img src="Assest/clap.png">
+                        <span class="liked_users">Anshika Sahni and 25 other</span>
+                    </div>
+
+                    <div>
+                        <span>52 Comments &middot; 10 Shares</span>
+                    </div>
+                </div>
+
+                <div class="post_activity">
+                    <div>
+                        <img src="Assest/user-5.png" class="post_activity_user_icon">
+                        <img src="Assest/down-arrow.png" class="post_activity_arrow_icon">
+                    </div>
+                    <div class="post_activity_link">
+                        <img src="Assest/like.png">
+                        <span>Like</span>
+                    </div>
+
+                    <div class="post_activity_link">
+                        <img src="Assest/comment.png">
+                        <span>Commment</span>
+                    </div>
+
+                    <div class="post_activity_link">
+                        <img src="Assest/share.png">
+                        <span>Share</span>
+                    </div>
+
+                    <div class="post_activity_link">
+                        <img src="Assest/send.png">
+                        <span></span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!--------- right_sidebar ---------->
+        <div class="right_sidebar">
+            <div class="right_sidebar_news">
+                <img src="Assest/more.png" class="info_icon">
+                <h3>Trending News</h3>
+                <a href="#">Health cover unaffected by premiums</a>
+                <span>12h ago &middot; 1,122 readers</span>
+
+                <a href="#">Luxury brands bet big on india</a>
+                <span>11h ago &middot; 1,122 readers</span>
+
+                <a href="#">Retail inflation dips</a>
+                <span>12h ago &middot; 1,122 readers</span>
+
+                <a href="#">RBI steps up forex reserve sales</a>
+                <span>12h ago &middot; 1,122 readers</span>
+
+                <a href="#">Luxury brands bet big on india</a>
+                <span>11h ago &middot; 1,122 readers</span>
+
+                <a href="#">Retail inflation dips</a>
+                <span>12h ago &middot; 1,122 readers</span>
+
+                <a href="#">RBI steps up forex reserve sales</a>
+                <span>12h ago &middot; 1,122 readers</span>
+
+                <a href="#" class="read_more_links">Read More</a>
+            </div>
+            <div class="sidebar_ad">
+                <small>Ad &middot; &middot; &middot;</small>
+                <p>Master the 4 prenciple of web development </p>
+                <div>
+                    <img src="Assest/user-1.png" width="100px">
+                    <img src="Assest/mi-logo.png">
+                </div>
+                <b>Brand & Demand in Xiamoi</b>
+                <a href="#" class="ad_link">Lern More</a>
+            </div>
+
+            <div class="sidebar_useful_links">
+                <a href="#">About</a>
+                <a href="#">Accessiblity</a>
+                <a href="#">Help Center</a>
+                <a href="#">Privacy & Terms <i class="fa-solid fa-sort-down"></i> </a>
+                <a href="#">Advertising</a>
+                <a href="#">Get Linkedinthe App</a>
+                <a href="#">More</a>
+
+                <div class="copyright_msg">
+                    <img src="Assest/logo.svg">
+                    <p>LinkedIn Corporation © 2025
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"> </script>
+</body>
+
+</html>
